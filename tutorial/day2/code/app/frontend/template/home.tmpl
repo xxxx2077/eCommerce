@@ -1,0 +1,26 @@
+{{template "head" .}}
+<body>
+    {{template "header"}}
+    <main>
+        <div class="container-fluid">
+            <!-- Content here -->
+            <div class="row">
+                {{range .Items}}
+                <div class="card col-xl-3 col-lg-4 col-md-6 col-sm-12 p-5 border-0">
+                    <img src="/static/image/{{.PictureName}}.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">{{ .Name}}</p>
+                        <h5 class="card-title">{{ .Price}}</h5>
+                    </div>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </main>
+    {{template "footer" }}
+    <script src="/static/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
